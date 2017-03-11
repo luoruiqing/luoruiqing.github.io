@@ -255,16 +255,100 @@
                     <p>眼光胸怀和实力</p>
                     <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
                 </blockquote>
+                <!--TODO 后面加个JS在中等屏幕对其到左边-->
                 <blockquote class="motto-lg">
                     <p>一个人的工作职位不怕低，只要你不放弃你的理想，拿目前的工作做一个踏脚石，一方面维持生活，一方面找时间充实自己，认准一个确定的方向去努力。慢慢的，你总会发现，你的努力没有白费。</p>
                     <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
                 </blockquote>
             </form>
         </div>
+        <!--TODO 后面加个JS 使座右铭在中等屏幕对其到左边-->
+        <div id="head-info-motto" class="col-sm-12"></div>
     </div>
 </section>
-<section>
+<section style="height: 100%;background-image: url('./images/banner.jpg');">
+    <div class="container">
+        <h3 style="margin-bottom: 15px;">最近在做的事儿</h3>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                           aria-expanded="true" aria-controls="collapseOne">
+                            彩票系统，all right，名字很LOW~
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        使用Tornado作为爬虫框架的时候，用这非阻塞HTTP Client真的是很爽，不过代码的移植性。。。呵呵。
+                        彩票系统作为一个高频刷新接口页面的流程，量级不高，但属于高频行为，Tornado的非阻塞特别适合这件事儿，
+                        but...理想很丰满，当我高频次的循环请求的时候且任务很多的时候，休息间隔（<kbd>gen.sleep</kbd>）又特别小的时候，意外的状况出现了，
+                        当每次 <kbd>yield</kbd>的时候，协程内部在无限次的切换执行其他非阻塞的代码中，我的当前任务还没有跑完整轮，
+                        他就切换到其他任务中去，其实切不切换无所谓，重要的是执行顺序乱了，我第一个任务的第一轮执行过程 可能会被压到后面无限长的队伍里面去，
+                        可能永远执行不到(虽然不大可能，但如果你的排队的人量级上去了，这个是有可能的！)，据说这是一群会排队懂规矩的三好有为青年乱插队一样。。不受控制。
+                        柜台依旧办理业务，也不管谁插队，反正我正在紧张的工作中。。。
+                        好吧，开始重写结构，分任务，分开在不同的进程里面，这次有了多个窗口，
+                        插队也没事儿了，反正我处理能力是固定的，大家分好类自己去自己的柜台办业务得了，针对每个柜台来说，反正人不多，都能很快的排上号。
+                        but....可能数据库不高兴了，瞬间打满了连接。。嗯。。。
+                        好吧，开始加上数据库连接池。。。
+                        总结：Tornado的协程啊，可不能乱用了，想清楚自己的业务场景是不是适合，不过用来做爬虫，性能booooooooo~~~
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </div>
 </section>
 <script type="text/javascript">
     $youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");
