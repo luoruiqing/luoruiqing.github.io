@@ -1,75 +1,118 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN">
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Reese</title>
-  <meta name="description" content="Reese">
-  <meta name="author" content="Reese">
+    <meta charset="utf-8">
+    <title>罗瑞青的个人简历</title>
+    <meta name="description" content="罗瑞青的个人简历">
+    <meta name="author" content="Reese">
 
-  <!-- Mobile Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
-  <!-- 感谢 有字库提供漂亮的小字字~~  http://www.youziku.com -->
-  <!-- Favicon -->
-  <style>
-    html,
-    body {
-      height: 100%;
-      width: 100%;
-    }
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <!-- 感谢 有字库提供漂亮的小字字~~  http://www.youziku.com -->
+    <!-- http://glyphicons.com/ 感谢字体 -->
+    <!-- Favicon -->
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
 
-    body {
-      font-size: 15px;
-      line-height: 1.50;
-      color: #333333;
-      background-color: #ffffff;
-    }
+        }
 
-    .bg_img {
-      height: 100%;
-      background-image: url('./images/banner.jpg');
-      background-repeat: no-repeat;
-      -moz-background-size: contain;
-      -webkit-background-size: contain;
-      -o-background-size: contain;
-      background-size: cover;
-      z-index: 1;
-    }
+        body {
+            font-size: 15px;
+            line-height: 1.50;
+            background-color: #ffffff;
+        }
 
-    h1 {
-      color: white;
-    }
+        .bg_img {
+            height: 100%;
+            background-image: url('./images/banner.jpg');
+            background-repeat: no-repeat;
+            -moz-background-size: contain;
+            -webkit-background-size: contain;
+            -o-background-size: contain;
+            background-size: cover;
+            z-index: 1;
+        }
 
-    .menu {
-      background: repeat;
-      filter: alpha(opacity=50);
-      -moz-opacity: 0.5; /* Firefox  有效*/
-      opacity: 0.5; /* 通用，其他浏览器  有效*/
-      border: 0;
-    }
+        h1 {
+            color: white;
+        }
 
-    .vague {
-      top: 0;
-      left: 0;
-      background-color: #000000;
-      opacity: 0.5;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-    }
+        .menu {
+            background: repeat;
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5; /* Firefox  有效*/
+            opacity: 0.5; /* 通用，其他浏览器  有效*/
+            border: 0;
+            color: white;
+        }
 
-    .vertical-center { /* 居中问题 */
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+        .vague {
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
 
-    .info {
-      padding-top: 20px;
-    }
-  </style>
+        .vertical-center { /* 居中问题 */
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .info {
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        .title_xs {
+            display: none;
+        }
+
+        .title_xs, .title_lg {
+            text-align: center;
+        }
+
+        .head-img {
+            /*background: repeat;*/
+            /*filter: alpha(opacity=0);*/
+            /*-moz-opacity: 0; !* Firefox  有效*!*/
+            /*opacity: 0; !* 通用，其他浏览器  有效*!*/
+            /*border: 0;*/
+            /*width: 300px;*/
+            /*height: 300px;*/
+        }
+
+        .head-img a, .head-img img {
+            /*position: absolute;*/
+            width: 100px;;
+            height: 100px;
+            /*overflow:hidden;*/
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .info .title_lg {
+                display: none;
+            }
+
+            .info .title_xs {
+                display: block;
+            }
+
+            .head-img {
+
+            }
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -83,62 +126,79 @@
 <div class="vague"></div>
 <!--灰色蒙层-->
 <header class="bg_img">
-  <section>
-    <nav class="menu navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-            <span class="icon-bar"></span>
-          </button>
-          <a class="menu-txt navbar-brand css95c70a86718578" href="#" style="color: white;opacity: 1;">Reese</a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">iOS</a></li>
-            <li><a href="#">SVN</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">jmeter</a></li>
-                <li><a href="#">EJB</a></li>
-                <li><a href="#">Jasper Report</a></li>
-                <li class="divider"></li>
-                <li><a href="#">分离的链接</a></li>
-                <li class="divider"></li>
-                <li><a href="#">另一个分离的链接</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <section>
+        <!-- menu -->
+        <nav class="menu navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="menu-txt navbar-brand css95c70a86718578" href="#"
+                       style="color: white;opacity: 1;">Reese</a>
 
-  </section>
-  <section>
-    <div class="info row">
-      <div class="col-xs-1 col-lg-2"></div>
-      <div class="col-xs-10 col-lg-8">
-        <div class="row">
-          <h3 class="col-xs-6 css95c6e94d918578">漂亮的字体</h3>
-          <h3 class="col-xs-6 css95c6e94d918578">漂亮的字体1</h3>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <p class="navbar-text navbar-right">罗瑞青的个人简历<a href="#" class="navbar-link">&nbsp;WORD版本</a></p>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">简介</a></li>
+                        <li><a href="#">SVN</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">jmeter</a></li>
+                                <li><a href="#">EJB</a></li>
+                                <li><a href="#">Jasper Report</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">分离的链接</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">另一个分离的链接</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+    <section id="info">
+        <div class="info section">
+            <div class="col-xs-1 col-lg-2"></div>
+            <div class="col-xs-10 col-lg-8">
+                <div class="container-fluid"></div>
+                <h3 class="title_xs css95c6e94d918578">个人简介</h3>
+                <h3 class="title_lg css95c6e94d918578">你好,欢迎浏览我的个人简历</h3>
+                <!--<div class="row">-->
+                <!--<form class="col-xs-12 col-sm-6">-->
+                <!--<div class="form-group">-->
+                <!--<label>罗瑞青&nbsp;Reese</label>-->
+
+                <!--</div>-->
+                <!--<label>Age:&nbsp;22</label>-->
+                <!--<br>-->
+                <!--<label><span class="glyphicon glyphicon-phone">17600224746</span></label>-->
+                <!--</form>-->
+                <!--</div>-->
+                <div class="row">
+
+                    <p class="lead">1995年 出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业，现居北京，拥有 2年爬虫、WEB开发经验,
+                        GitHub:<a href="https://github.com/luoruiqing"> https://github.com/luoruiqing</a></p>
+                </div>
+            </div>
+            <div class="col-xs-1 col-lg-2"></div>
         </div>
-        <div class="row ">
-          <p>孔子东游，见两小儿辩斗，问其故。一儿曰：“我以日始出时去人近，而日中时远也。”一儿以日初出远，而日中时近也。一儿曰：“日初出大如车盖，及日中则如盘盂（yú），此不为远者小而近者大乎</p>
-        </div>
-      </div>
-      <div class="col-xs-1 col-lg-2"></div>
-    </div>
-  </section>
+    </section>
 </header>
 <section>
 
 </section>
 <script type="text/javascript">
-  $youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");
-  /*$youziku.load("#id1,.class1,h1", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");*/
-  /*．．．*/
-  $youziku.draw();</script>
+    $youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");
+    /*$youziku.load("#id1,.class1,h1", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");*/
+    /*．．．*/
+    $youziku.draw();</script>
 </body>
-<script type="application/javascript" src="js/jquery/jquery.min.js"></script>
-<script type="application/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="application/javascript" src="bootstrap/js/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </html>
