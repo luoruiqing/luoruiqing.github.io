@@ -33,6 +33,10 @@
             background-image: url('./images/banner.jpg');
         }
 
+        section {
+            margin: 120px 0;
+        }
+
         /*  居中 */
         .vertical-center { /* 居中问题 */
             /*transform: translate(-50%, -50%);*/
@@ -110,18 +114,42 @@
 
         /* 头像 */
 
-        .head-img a, .head-img img {
+        #head-img {
             /*position: absolute;*/
-            width: 100px;;
-            height: 100px;
+            min-width: 100%;;
+            min-height: 100%;
             /*overflow:hidden;*/
 
         }
 
+        #head-info {
+            font-size: 25px;
+        }
+
+        .motto-xs {
+            display: none;
+        }
+
         /*   响应式调整   */
         @media screen and (max-width: 768px) {
+            section {
+                margin: 80px 0;
+            }
+
+            #head-info p {
+                font-size: 20px;
+            }
+
             #info {
                 margin-top: 100px;
+            }
+
+            .motto-lg {
+                display: none;
+            }
+
+            .motto-xs {
+                display: block;
             }
 
             #info .title_lg {
@@ -132,9 +160,6 @@
                 display: block;
             }
 
-            .head-img {
-
-            }
         }
     </style>
 </head>
@@ -165,7 +190,7 @@
                        target="_blank">WORD版本</a>
                 </p>
                 <ul class="nav navbar-nav">
-                    <li><a href="#">简介</a></li>
+                    <li><a href="#head">简介</a></li>
                     <li><a href="#">SVN</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
@@ -191,19 +216,9 @@
                 <div class="container-fluid"></div>
                 <h3 class="title_xs css95c6e94d918578">个人简介</h3>
                 <h3 class="title_lg css95c6e94d918578">你好,欢迎浏览我的个人简历</h3>
-                <!--<div class="row">-->
-                <!--<form class="col-xs-12 col-sm-6">-->
-                <!--<div class="form-group">-->
-                <!--<label>罗瑞青&nbsp;Reese</label>-->
 
-                <!--</div>-->
-                <!--<label>Age:&nbsp;22</label>-->
-                <!--<br>-->
-                <!--<label><span class="glyphicon glyphicon-phone">17600224746</span></label>-->
-                <!--</form>-->
-                <!--</div>-->
                 <div class="row">
-                    <p class="lead">1995年出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业；现居北京，拥有 2年爬虫、WEB开发经验,
+                    <p class="lead">相比技术,我可能更喜欢生活，喜欢世界日新月异的变化，喜欢一个人去做喜欢的事情。
                         GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>
                     </p>
                 </div>
@@ -212,6 +227,42 @@
         </div>
     </section>
 </header>
+<section id="head">
+    <div class="container">
+
+        <div class="col-xs-12 col-sm-4">
+            <div id="head-img" class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="images/me.jpg" alt="824*824">
+                </a>
+            </div>
+        </div>
+        <div id="head-info" class="col-xs-12  col-sm-8">
+            <form>
+
+                <div class="form-group">
+                    <label>罗瑞青&nbsp;Reese</label>
+
+                </div>
+                <label>Age:&nbsp;22</label>
+                <br>
+                <label><span class="glyphicon glyphicon-phone"></span>
+                    <a id=tel" href="tel:17600224746">17600224746</a>
+                </label>
+                <p>1995年出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业；现居北京，拥有 2年爬虫、WEB开发经验。</p>
+                <div style="height: 20px"></div>
+                <blockquote class="motto-xs">
+                    <p>眼光胸怀和实力</p>
+                    <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
+                </blockquote>
+                <blockquote class="motto-lg">
+                    <p>一个人的工作职位不怕低，只要你不放弃你的理想，拿目前的工作做一个踏脚石，一方面维持生活，一方面找时间充实自己，认准一个确定的方向去努力。慢慢的，你总会发现，你的努力没有白费。</p>
+                    <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
+                </blockquote>
+            </form>
+        </div>
+    </div>
+</section>
 <section>
 
 </section>
