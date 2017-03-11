@@ -28,12 +28,24 @@
             background-color: #ffffff;
         }
 
-        /*  零散的 */
+        header {
+            height: 100%;
+            background-image: url('./images/banner.jpg');
+        }
+
+        /*  居中 */
         .vertical-center { /* 居中问题 */
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            /*transform: translate(-50%, -50%);*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /*  首屏 */
@@ -48,8 +60,6 @@
         }
 
         .bg_img {
-            height: 100%;
-            background-image: url('./images/banner.jpg');
             background-repeat: no-repeat;
             -moz-background-size: contain;
             -webkit-background-size: contain;
@@ -59,25 +69,22 @@
         }
 
         /*  菜单 TODO 记住有个选中问题 */
-
-        .menu .navbar-nav > li > a, .menu .navbar-link {
-            color: white;
+        .menu {
+            background: repeat; /* 背景透明 */
+            border: 0; /* 清除线条 */
+            color: white; /* 文字白色 */
         }
 
         .menu .navbar-brand {
-            font-size: 22px;
+            font-size: 22px; /* 标题名字更大 */
+        }
+
+        .menu .navbar-brand, .menu .navbar-link, .menu .navbar-nav > li > a {
             color: white;
-            filter: alpha(opacity=100);
+            filter: alpha(opacity=5);
             -moz-opacity: 0.5; /* Firefox  有效*/
             opacity: 0.5; /* 通用，其他浏览器  有效*/
             border: 0;
-        }
-
-        .menu {
-            background: repeat;
-            border: 0;
-            color: white;
-
         }
 
         .navbar-default .navbar-toggle .icon-bar {
@@ -85,14 +92,13 @@
         }
 
         /*  简介 */
-        .info {
-            padding-top: 20px;
-            width: 100%;
+        #info {
+            margin-top: 300px;
         }
 
-        #info p {
-            color: white;
-        }
+        /*#info p {*/
+        /*color: white;*/
+        /*}*/
 
         .title_xs {
             display: none;
@@ -112,12 +118,17 @@
 
         }
 
+        /*   响应式调整   */
         @media screen and (max-width: 768px) {
-            .info .title_lg {
+            #info {
+                margin-top: 100px;
+            }
+
+            #info .title_lg {
                 display: none;
             }
 
-            .info .title_xs {
+            #info .title_xs {
                 display: block;
             }
 
@@ -138,8 +149,7 @@
 <!--灰色蒙层-->
 <div class="vague"></div>
 <!--灰色蒙层-->
-<header class="bg_img">
-    <!-- menu -->
+<header id="top">
     <nav class="menu navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -148,10 +158,12 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand css95c70a86718578" href="#">Reese</a>
-
             </div>
-            <div class="navbar-body collapse navbar-collapse" id="example-navbar-collapse">
-                <p class="navbar-text navbar-right"><a href="#" class="navbar-link">WORD版本</a></p>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <p class="navbar-right navbar-text">
+                    <a href="statics/%E7%BD%97%E7%91%9E%E9%9D%92%E7%9A%84%E7%AE%80%E5%8E%86.pdf" class="navbar-link"
+                       target="_blank">WORD版本</a>
+                </p>
                 <ul class="nav navbar-nav">
                     <li><a href="#">简介</a></li>
                     <li><a href="#">SVN</a></li>
@@ -162,7 +174,7 @@
                             <li><a href="#">EJB</a></li>
                             <li><a href="#">Jasper Report</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">分离的链接</a></li>
+                            <li><a href="#">分离的链接</a>x</li>
                             <li class="divider"></li>
                             <li><a href="#">另一个分离的链接</a></li>
                         </ul>
@@ -173,7 +185,7 @@
     </nav>
 
     <section id="info">
-        <div class="info section">
+        <div class="section">
             <div class="col-xs-1 col-lg-2"></div>
             <div class="col-xs-10 col-lg-8">
                 <div class="container-fluid"></div>
@@ -191,8 +203,9 @@
                 <!--</form>-->
                 <!--</div>-->
                 <div class="row">
-                    <p class="lead">1995年 出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业；现居北京，拥有 2年爬虫、WEB开发经验,
-                        GitHub:<a href="https://github.com/luoruiqing"> https://github.com/luoruiqing</a></p>
+                    <p class="lead">1995年出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业；现居北京，拥有 2年爬虫、WEB开发经验,
+                        GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>
+                    </p>
                 </div>
             </div>
             <div class="col-xs-1 col-lg-2"></div>
