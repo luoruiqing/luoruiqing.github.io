@@ -98,11 +98,13 @@
 
         /*  简介 */
         #info {
-            margin-top: 300px;
+            margin-top: 15%;
+            /*vertical-align: middle;*/
         }
 
         /*#info p {*/
-        /*color: white;*/
+        /*color: white*/
+        /*opacity: 0.8;*/
         /*}*/
 
         .title_xs {
@@ -117,7 +119,7 @@
 
         #head-img {
             /*position: absolute;*/
-            min-width: 100%;;
+            min-width: 100%;
             min-height: 100%;
             /*overflow:hidden;*/
 
@@ -131,23 +133,35 @@
             display: none;
         }
 
+        #exp .lead + p {
+            font-size: 14px;
+        }
+
+        .phone-qq {
+            display: none;
+        }
+
         /*   响应式调整   */
         @media screen and (max-width: 768px) {
-
-            dd {
-                padding-left: 30px;
-            }
 
             section {
                 margin: 80px 0;
             }
 
-            #head-info p {
+            dt {
+                padding-left: 3%;
+            }
+
+            dd {
+                padding-left: 16%;
+            }
+
+            #head-info {
                 font-size: 20px;
             }
 
             #info {
-                margin-top: 100px;
+                margin-top: 27%;
             }
 
             .motto-lg {
@@ -166,6 +180,13 @@
                 display: block;
             }
 
+            .phone-qq {
+                display: block;
+            }
+
+            .pc-qq {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -188,7 +209,7 @@
                         data-target="#example-navbar-collapse" style="margin-top: 15px">
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand css95c70a86718578" href="#">Reese</a>
+                <a class="navbar-brand" href="#">Reese</a>
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <p class="navbar-right navbar-text">
@@ -197,19 +218,13 @@
                 </p>
                 <ul class="nav navbar-nav">
                     <li><a href="#head">简介</a></li>
-                    <li><a href="#">SVN</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">jmeter</a></li>
-                            <li><a href="#">EJB</a></li>
-                            <li><a href="#">Jasper Report</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">分离的链接</a>x</li>
-                            <li class="divider"></li>
-                            <li><a href="#">另一个分离的链接</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#recently">近况</a></li>
+                    <li><a href="#evaluate">个人评价</a></li>
+                    <li><a href="#storage">技术储备</a></li>
+                    <li><a href="#exp">项目经验</a></li>
+                    <li><a href="#thx">感谢</a></li>
+                    <li><a href="https://github.com/luoruiqing" target="_blank">Github</a></li>
+                    <li><a href="#about">关于</a></li>
                 </ul>
             </div>
         </div>
@@ -220,14 +235,11 @@
             <div class="col-xs-1 col-lg-2"></div>
             <div class="col-xs-10 col-lg-8">
                 <div class="container-fluid"></div>
-                <h3 class="title_xs css95c6e94d918578">个人简介</h3>
-                <h3 class="title_lg css95c6e94d918578">你好,欢迎浏览我的个人简历</h3>
-
-                <div class="row">
-                    <p class="lead">相比技术,我可能更喜欢生活，喜欢世界日新月异的变化，喜欢一个人去做喜欢的事情。
-                        <!--GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>-->
-                    </p>
-                </div>
+                <h3 class="title_xs">个人简介</h3>
+                <h3 class="title_lg">你好,欢迎浏览我的个人简历</h3>
+                <p class="lead text-center">相比技术,我可能更喜欢生活，喜欢世界日新月异的变化，喜欢一个人去做喜欢的事情。
+                    <!--GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>-->
+                </p>
             </div>
             <div class="col-xs-1 col-lg-2"></div>
         </div>
@@ -278,7 +290,7 @@
     </div>
 
 </section>
-<section style="background-image: url('./images/banner.jpg');">
+<section id="recently" style="background-image: url('./images/banner.jpg');">
     <div class="container">
         <h3 style="margin-bottom: 15px;">最近在做的事儿</h3>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -287,12 +299,31 @@
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                            aria-expanded="true" aria-controls="collapseOne">
-                            彩票系统，all right，名字很LOW~
+                            学习弹吉他
+
                         </a>
 
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        这可能是我第一次正儿八经的接触乐器了，感觉难度很大，但是以我英雄联盟白金手子的能力，相信我能够克服困难。
+                        万一以后不当码农了，去做个流浪歌手之类的，也是可以的，就算是做不成流浪歌手，没事学学狗挠门也还是不错。
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            彩票系统，比较烦这里面的种种坑
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
                         使用Tornado作为爬虫框架的时候，用这非阻塞HTTP Client真的是很爽，不过代码的移植性。。。呵呵。
                         彩票系统作为一个高频刷新接口页面的流程，量级不高，但属于高频行为，Tornado的非阻塞特别适合这件事儿，
@@ -309,71 +340,38 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Collapsible Group Item #2
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3
-                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum
-                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-                        nulla
-                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                        nesciunt
-                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                        labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Collapsible Group Item #3
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3
-                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum
-                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-                        nulla
-                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                        nesciunt
-                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                        labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
+            <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading" role="tab" id="headingThree">-->
+            <!--<h4 class="panel-title">-->
+            <!--<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"-->
+            <!--href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+            <!--有生之年能够成为一个改变世界的人-->
+            <!--</a>-->
+            <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">-->
+            <!--<div class="panel-body">-->
+            <!--&lt;!&ndash;像马云似的，有想法就能变成现实，然后影响千千万万的人，以前老大总说我，写代码跟脑电波似的，&ndash;&gt;-->
+            <!--&lt;!&ndash;就希望想想就能变成现实，其实不远的将来就会出现，不是么。&ndash;&gt;-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
         </div>
 
     </div>
 </section>
-<section>
+<section id="evaluate">
     <div class="container">
         <h3 style="margin-bottom: 25px;">个人评价</h3>
         <div class="panel-body">
             &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
-            求知欲强烈，热爱技术，喜欢新技术。
+            求知欲强烈，热爱技术，喜欢新技术,喜欢code review。
             本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
+            <footer class="text-right">可以理解为一个<cite title="Source Title">臭写代码</cite>的</footer>
         </div>
     </div>
 </section>
-<section>
+<section id="storage">
     <div class="container">
         <h3>技术储备</h3>
         <div class="row">
@@ -433,18 +431,20 @@
                     <dt>概念</dt>
                     <dd>Socket</dd>
                     <dd>HTTP</dd>
+                    <dd>Restful</dd>
                     <dd>API</dd>
                     <dd>分布式</dd>
                     <dd>协程</dd>
                     <dd>IO多路复用</dd>
                     <br>
-                    <dt>WEB前端/框架</dt>
+                    <dt>WEB前端/框架/组件</dt>
                     <dd>HTML/CSS/JavaScript</dd>
                     <dd>Jquery</dd>
                     <dd>Bootstrap</dd>
                     <dd>AngularJS</dd>
                     <dd>Vue</dd>
                     <dd>AJAX/JSONP</dd>
+                    <dd>EChars</dd>
                     <br>
                     <dt>测试工具</dt>
                     <dd>CProfile</dd>
@@ -458,38 +458,73 @@
         </div>
     </div>
 </section>
+<section id="exp">
+    <div class="container">
+        <h3>项目经验</h3>
+        <div style="margin-left: 20px;">
+            <h4>短视频-抓取 Crawler videos</h4>
+            <p class="lead">&nbsp;- 为蛙趣视频提供丰富的视频内容，支撑基础的短视频点播服务，根据其他视频站点抓取到的视频重新编辑整理后产生聚合内容。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;基于分布式的生产消费者模式,实现任务去重、调度、代理池动态分配、登陆认证破解、视频加密破解、优先级、错误收集、
+                邮件报警、单元测试、流媒体、PhantomJS、XPath支持、消息队列，任务可配置，运行中动态配置，模块化开发、一键部署启停集群任务，
+                人工干预、定时任务、统计相关、Selenium抽取Cookies等，任务配置可分优先级，分服务器地区，分站点，分清晰度，分页面，分热度。</p>
+            <div style="height: 30px;"></div>
+            <h4>WAP/PC 端开发</h4>
+            <p class="lead">&nbsp;- 短视频的网页点播服务，包含播放页面，推荐页，视频专辑页面。以及部分导流页，活动页。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;采用Python Tornado作为后端框架，数据库采用的RDS-SQL,前端使用基础前端技术+AngularJS实现，播放器使用乐视云播放器。</p>
+            <div style="height: 30px;"></div>
+            <h4>安卓应用市场-抓取</h4>
+            <p class="lead">&nbsp;-
+                各大安卓APP应用市场数据，包含360手机助手(手机端)、华为、安智、豌豆荚等，检测分类下新上应用信息，以及各个APP每日数据变化，达到同一APP在不同时间的数据体现。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;使用分布式、多线程的模式抓取数据，统计结果展示服务使用 Django，Bootstrap，EChars
+                框架组件完成，可根据不同维度展示抓取数据，以及定时脚本产出的量级较高的统计结果。</p>
+            <div style="height: 30px;"></div>
+            <h4>彩票系统-抓取</h4>
+            <p class="lead">&nbsp;- 蛙趣视频彩票 大屏幕专版和APP足篮彩直播，其中包含11选5(分地区)、足篮彩、快3(分地区)、大乐透等多个玩法的数据支持。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;双机器多进程执行、使用Tornado协程 和其AsyncHttpClient 并发且高频次抓取彩票相关数据，
+                每种彩票玩法保证有2个以上的相关站点支持，在单个彩票站点宕机的时候可以保证自家站点的线上业务稳定，同时保证数据完整性。</p>
+            <div style="height: 30px;"></div>
+        </div>
+    </div>
+</section>
 <section>
     <div class="container">
-        <h3>职业技能</h3>
-        <p>
-            基于生产消费者模式
-            任务去重、调度、应对反爬、代理池动态分配、登陆认证破解、优先级、错误收集、邮件报警、单元测试、模块化开发，Selenium抽取Cookies、协程(Tornado)并发、流、PhantomJS、XPath、消息队列，任务可配置，运行中动态配置，定时任务、人工干预、统计相关等
-        </p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 style="width:100%"
+                src="//music.163.com/outchain/player?type=2&id=409647889&auto=0&height=66"></iframe>
     </div>
 </section>
-<section>
-    <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6" style="min-width: 300px;">
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 style="width:100%"
-                    src="//music.163.com/outchain/player?type=2&id=409647889&auto=0&height=66"></iframe>
+
+<section id="thx">
+    <div class="container">
+        <!-- 小屏幕标题居中特别好 -->
+        <h2>特别感谢</h2>
+        <div style="margin-left: 5%">
+            <p class="lead"><strong>Github</strong> 提供免费的简历网站存储和网络访问。</p>
+            <p class="lead"><strong>蛙趣视频</strong> 给我学习成长的机会。</p>
+            <p class="lead"><strong>父母</strong> 养育之恩，<strong>女朋友</strong>的相守陪伴。</p>
+            <p class="lead"><strong>关心我的人</strong>的鼓励支持与教导。</p>
         </div>
-        <div class="col-sm-3"></div>
     </div>
 </section>
 <section>
+    <div style="height: 1px"></div>
+</section>
+<section></section>
+<section id="about">
     <div class="container text-center">
         <address>
             <strong><a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank">Weibo</a></strong><br>
             <a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank" style="color: black">KING-REESE</a><br>
             北京市昌平区北七家王府温馨公寓<br>
-            <abbr title="Phone">P:</abbr> <a href="tel:17600224746" style="color: black">(+86)17600224746</a>
-
+            <abbr title="Phone">P:</abbr> <a href="tel:17600224746" style="color: black">(+86)17600224746</a><br>
+            <abbr title="QQ">QQ:</abbr><a class="phone-qq"
+                                          href="mqqwpa://im/chat?chat_type=wpa&uin=184187664">184187664</a>
+            <a class="pc-qq" href="tencent://message/?uin=184187664">184187664</a>
+            <br>
         </address>
 
         <address>
             <strong>罗瑞青</strong><br>
-            <a href="mailto:184817664@qq.com">184187664@qq.com</a>
+            <a href="mailto:184817664@qq.com">184187664@qq.com</a><br>
         </address>
     </div>
 
@@ -503,4 +538,17 @@
 </body>
 <script type="application/javascript" src="bootstrap/js/jquery/jquery.min.js"></script>
 <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    // 座右铭对齐
+    setInterval(function () {
+        var head_img_width = $("#head-img").width();
+        console.log(head_img_width);
+        if (head_img_width < 300) {
+            $('#head-info-motto').append($(".motto-lg"));
+        } else if (head_img_width > 300) {
+            $('#head-info form').append($(".motto-lg"));
+        }
+    }, 1000)
+
+</script>
 </html>
