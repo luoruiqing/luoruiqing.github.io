@@ -133,6 +133,11 @@
 
         /*   响应式调整   */
         @media screen and (max-width: 768px) {
+
+            dd {
+                padding-left: 30px;
+            }
+
             section {
                 margin: 80px 0;
             }
@@ -180,7 +185,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#example-navbar-collapse">
+                        data-target="#example-navbar-collapse" style="margin-top: 15px">
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand css95c70a86718578" href="#">Reese</a>
@@ -220,7 +225,7 @@
 
                 <div class="row">
                     <p class="lead">相比技术,我可能更喜欢生活，喜欢世界日新月异的变化，喜欢一个人去做喜欢的事情。
-                        GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>
+                        <!--GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>-->
                     </p>
                 </div>
             </div>
@@ -284,6 +289,7 @@
                            aria-expanded="true" aria-controls="collapseOne">
                             彩票系统，all right，名字很LOW~
                         </a>
+
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -359,7 +365,7 @@
 </section>
 <section>
     <div class="container">
-        <h3 style="margin-bottom: 15px;">个人评价</h3>
+        <h3 style="margin-bottom: 25px;">个人评价</h3>
         <div class="panel-body">
             &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
             求知欲强烈，热爱技术，喜欢新技术。
@@ -370,74 +376,86 @@
 <section>
     <div class="container">
         <h3>技术储备</h3>
-        <dl class="dl-horizontal">
-            <dt>版本控制</dt>
-            <dd>SVN</dd>
-            <dd>Git</dd>
-            <br>
-            <dt>消息交换协议</dt>
-            <dd>JSON</dd>
-            <dd>XML</dd>
-            <br>
-            <dt>数据库/缓存/队列</dt>
-            <dd>MySQL</dd>
-            <dd>Mongodb</dd>
-            <dd>MySQL</dd>
-            <dd>Redis</dd>
-            <dd>Memcache</dd>
-            <dd>RabbitMQ</dd>
-            <br>
-            <dt>WEB框架</dt>
-            <dd>Tornado</dd>
-            <dd>Django</dd>
-            <dd>Flask</dd>
-            <dd>Webpy</dd>
-            <dd>NodeJS</dd>
-            <dt>系统服务</dt>
-            <dd>Linux</dd>
-            <dd>Supervisor</dd>
-            <dd>PIP</dd>
-            <dt>其他</dt>
-            <dd>Kivy</dd>
-            <dd>Smtplib</dd>
-            <dd>SQLAlchemy</dd>
-            <dd>PIL</dd>
-            <dd>PYQT</dd>
-            <dt>爬虫</dt>
-            <dd>BeautifulSoup</dd>
-            <dd>Requests</dd>
-            <dd>Cookie</dd>
-            <dd>Re</dd>
-            <dd>Urlparse</dd>
-            <dd>Urllib</dd>
-            <dd>selenium</dd>
-            <dt>概念</dt>
-            <dd>Socket</dd>
-            <dd>HTTP</dd>
-            <dd>API</dd>
-            <dd>AJAX/JSONP</dd>
-            <dd>分布式</dd>
-            <dd>协程</dd>
-            <dd>IO多路复用</dd>
-            <dt>语言</dt>
-            <dd>Python</dd>
-            <dd>JavaScript</dd>
-            <dd>Bash Shell</dd>
-            <dt>WEB前端</dt>
-            <dd>HTML</dd>
-            <dd>CSS</dd>
-            <dd>JavaScript</dd>
-            <dt>前端框架</dt>
-            <dd>Jquery</dd>
-            <dd>Bootstrap</dd>
-            <dd>AngularJS</dd>
-            <dd>VUE</dd>
-            <dt>IDE/工具</dt>
-            <dd>Pycharm</dd>
-            <dd>Sublime Text</dd>
-            <dd>Grunt</dd>
-            <dd>Fiddler</dd>
-        </dl>
+        <div class="row">
+            <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                    <dt>版本控制</dt>
+                    <dd>SVN</dd>
+                    <dd>Git</dd>
+                    <br>
+                    <dt>消息交换协议</dt>
+                    <dd>JSON</dd>
+                    <dd>XML</dd>
+                    <br>
+                    <dt>系统服务</dt>
+                    <dd>Linux</dd>
+                    <dd>Bash Shell</dd>
+                    <dd>Supervisor</dd>
+                    <dd>PIP</dd>
+                    <br>
+                    <dt>WEB框架</dt>
+                    <dd>Tornado</dd>
+                    <dd>Django</dd>
+                    <dd>Flask</dd>
+                    <dd>Webpy</dd>
+                    <dd>NodeJS</dd>
+                    <br>
+                    <dt>爬虫</dt>
+                    <dd>BeautifulSoup</dd>
+                    <dd>Requests</dd>
+                    <dd>Session/Cookie</dd>
+                    <dd>Re</dd>
+                    <dd>Urlparse</dd>
+                    <dd>Urllib</dd>
+                    <br>
+                    <dt>IDE/工具</dt>
+                    <dd>Pycharm/Sublime Text</dd>
+                    <dd>Fiddler</dd>
+                    <dd>Grunt</dd>
+                    <br>
+                    <dt>其他</dt>
+                    <dd>Kivy</dd>
+                    <dd>SQLAlchemy</dd>
+                    <dd>PIL</dd>
+                    <dd>PYQT</dd>
+                    <dd>Selenium</dd>
+                    <dd>Proxy/FTP server</dd>
+                </dl>
+            </div>
+            <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                    <dt>数据库/缓存/队列</dt>
+                    <dd>MySQL</dd>
+                    <dd>Mongodb</dd>
+                    <dd>Redis/Memcache</dd>
+                    <dd>RabbitMQ</dd>
+                    <br>
+                    <dt>概念</dt>
+                    <dd>Socket</dd>
+                    <dd>HTTP</dd>
+                    <dd>API</dd>
+                    <dd>分布式</dd>
+                    <dd>协程</dd>
+                    <dd>IO多路复用</dd>
+                    <br>
+                    <dt>WEB前端/框架</dt>
+                    <dd>HTML/CSS/JavaScript</dd>
+                    <dd>Jquery</dd>
+                    <dd>Bootstrap</dd>
+                    <dd>AngularJS</dd>
+                    <dd>Vue</dd>
+                    <dd>AJAX/JSONP</dd>
+                    <br>
+                    <dt>测试工具</dt>
+                    <dd>CProfile</dd>
+                    <dd>Pstats</dd>
+                    <dd>Dis</dd>
+                    <dd>Unittest</dd>
+                    <dd>Timeit</dd>
+                    <dd>linux-AD</dd>
+                </dl>
+            </div>
+        </div>
     </div>
 </section>
 <section>
@@ -450,12 +468,16 @@
     </div>
 </section>
 <section>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 style="width:100%"
+            src="//music.163.com/outchain/player?type=2&id=409647889&auto=0&height=66"></iframe>
+</section>
+<section>
     <div class="container text-center">
         <address>
-            <strong><a href="http://weibo.com/u/5449233194?s=6uyXnP">Weibo</a></strong><br>
-            <a href="http://weibo.com/u/5449233194?s=6uyXnP" style="color: black">KING-REESE</a><br>
+            <strong><a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank">Weibo</a></strong><br>
+            <a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank" style="color: black">KING-REESE</a><br>
             北京市昌平区北七家王府温馨公寓<br>
-            <abbr title="Phone">P:</abbr> (+86)17600224746
+            <abbr title="Phone">P:</abbr> <a href="tel:17600224746" style="color: black">(+86)17600224746</a>
 
         </address>
 
