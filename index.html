@@ -5,22 +5,15 @@
     <title>罗瑞青的个人简历</title>
     <meta name="description" content="罗瑞青的个人简历">
     <meta name="author" content="Reese">
-
-    <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
-    <!-- 感谢 有字库提供漂亮的小字字~~  http://www.youziku.com -->
-    <!-- http://glyphicons.com/ 感谢字体 -->
-    <!-- https://pictonic.co/ 图标支持-->
-    <!-- Favicon -->
     <style>
         /*  基础属性 */
         html,
         body {
             height: 100%;
             width: 100%;
-
+            font-family: "微软雅黑";
         }
 
         body {
@@ -102,18 +95,14 @@
             /*vertical-align: middle;*/
         }
 
+        #info h3 {
+            text-align: center;
+        }
+
         /*#info p {*/
         /*color: white*/
         /*opacity: 0.8;*/
         /*}*/
-
-        .title_xs {
-            display: none;
-        }
-
-        .title_xs, .title_lg {
-            text-align: center;
-        }
 
         /* 头像 */
 
@@ -129,16 +118,13 @@
             font-size: 25px;
         }
 
-        .motto-xs {
-            display: none;
-        }
-
         #exp .lead + p {
             font-size: 14px;
         }
 
-        .phone-qq {
-            display: none;
+        #exp small {
+            color: #31708f;
+            font-weight: bold;
         }
 
         /*   响应式调整   */
@@ -164,29 +150,10 @@
                 margin-top: 27%;
             }
 
-            .motto-lg {
-                display: none;
+            #thx h2 {
+                text-align: center;
             }
 
-            .motto-xs {
-                display: block;
-            }
-
-            #info .title_lg {
-                display: none;
-            }
-
-            #info .title_xs {
-                display: block;
-            }
-
-            .phone-qq {
-                display: block;
-            }
-
-            .pc-qq {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -222,6 +189,7 @@
                     <li><a href="#evaluate">个人评价</a></li>
                     <li><a href="#storage">技术储备</a></li>
                     <li><a href="#exp">项目经验</a></li>
+                    <li><a href="#work_exp">工作经历</a></li>
                     <li><a href="#thx">感谢</a></li>
                     <li><a href="https://github.com/luoruiqing" target="_blank">Github</a></li>
                     <li><a href="#about">关于</a></li>
@@ -235,8 +203,8 @@
             <div class="col-xs-1 col-lg-2"></div>
             <div class="col-xs-10 col-lg-8">
                 <div class="container-fluid"></div>
-                <h3 class="title_xs">个人简介</h3>
-                <h3 class="title_lg">你好,欢迎浏览我的个人简历</h3>
+                <h3 class="visible-xs">个人简介</h3>
+                <h3 class="hidden-xs">你好,欢迎浏览我的个人简历</h3>
                 <p class="lead text-center">相比技术,我可能更喜欢生活，喜欢世界日新月异的变化，喜欢一个人去做喜欢的事情。
                     <!--GitHub:<a href="https://github.com/luoruiqing" target="_blank">https://github.com/luoruiqing</a>-->
                 </p>
@@ -267,21 +235,21 @@
                 <label><span class="glyphicon glyphicon-phone"></span>
                     <a id=tel" href="tel:17600224746">17600224746</a>
                 </label>
-                <p>1995年出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业；现居北京，拥有 2年爬虫、WEB开发经验。</p>
+                <p>1995年出生在 内蒙古，在内蒙古电子信息学院就读 软件开发专业，毕业于2015年6月；现居北京，拥有 2年爬虫、WEB开发经验。</p>
                 <div style="height: 20px"></div>
-                <blockquote class="motto-xs">
+                <blockquote class="visible-xs-block">
                     <p>眼光胸怀和实力</p>
                     <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
                 </blockquote>
-                <!--TODO 后面加个JS在中等屏幕对其到左边-->
-                <blockquote class="motto-lg">
-                    <p>一个人的工作职位不怕低，只要你不放弃你的理想，拿目前的工作做一个踏脚石，一方面维持生活，一方面找时间充实自己，认准一个确定的方向去努力。慢慢的，你总会发现，你的努力没有白费。</p>
-                    <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
-                </blockquote>
+
             </form>
         </div>
-        <!--TODO 后面加个JS 使座右铭在中等屏幕对其到左边-->
-        <div id="head-info-motto" class="col-sm-12"></div>
+        <div id="head-info-motto" class="col-sm-12">
+            <blockquote class="hidden-xs">
+                <p>一个人的工作职位不怕低，只要你不放弃你的理想，拿目前的工作做一个踏脚石，一方面维持生活，一方面找时间充实自己，认准一个确定的方向去努力。慢慢的，你总会发现，你的努力没有白费。</p>
+                <footer class="text-right">安心做个<cite title="Source Title">程序○</cite></footer>
+            </blockquote>
+        </div>
     </div>
 </section>
 <section>
@@ -300,17 +268,13 @@
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                            aria-expanded="true" aria-controls="collapseOne">
                             学习弹吉他
-
                         </a>
-
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                         这可能是我第一次正儿八经的接触乐器了，感觉难度很大，但是以我英雄联盟白金手子的能力，相信我能够克服困难。
                         万一以后不当码农了，去做个流浪歌手之类的，也是可以的，就算是做不成流浪歌手，没事学学狗挠门也还是不错。
-
-
                     </div>
                 </div>
             </div>
@@ -365,7 +329,7 @@
         <h3 style="margin-bottom: 25px;">个人评价</h3>
         <div class="panel-body">
             &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
-            求知欲强烈，热爱技术，喜欢新技术,喜欢code review。
+            求知欲强烈，热爱技术，喜欢新技术，喜欢code review。
             本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
             <footer class="text-right">可以理解为一个<cite title="Source Title">臭写代码</cite>的</footer>
         </div>
@@ -462,39 +426,96 @@
     <div class="container">
         <h3>项目经验</h3>
         <div style="margin-left: 20px;">
-            <h4>短视频-抓取 Crawler videos</h4>
+            <h4>短视频-抓取 Crawler
+                <small>负责人</small>
+            </h4>
             <p class="lead">&nbsp;- 为蛙趣视频提供丰富的视频内容，支撑基础的短视频点播服务，根据其他视频站点抓取到的视频重新编辑整理后产生聚合内容。</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;基于分布式的生产消费者模式,实现任务去重、调度、代理池动态分配、登陆认证破解、视频加密破解、优先级、错误收集、
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;基于分布式的生产消费者模式，实现任务去重、调度、代理池动态分配、登陆认证破解、视频加密破解、优先级、错误收集、
                 邮件报警、单元测试、流媒体、PhantomJS、XPath支持、消息队列，任务可配置，运行中动态配置，模块化开发、一键部署启停集群任务，
                 人工干预、定时任务、统计相关、Selenium抽取Cookies等，任务配置可分优先级，分服务器地区，分站点，分清晰度，分页面，分热度。</p>
             <div style="height: 30px;"></div>
-            <h4>WAP/PC 端开发</h4>
+            <h4>WAP/PC 端开发
+                <small>协作开发</small>
+            </h4>
             <p class="lead">&nbsp;- 短视频的网页点播服务，包含播放页面，推荐页，视频专辑页面。以及部分导流页，活动页。</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;采用Python Tornado作为后端框架，数据库采用的RDS-SQL,前端使用基础前端技术+AngularJS实现，播放器使用乐视云播放器。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;采用Python Tornado作为后端框架，数据库采用的RDS-SQL，前端使用基础前端技术+AngularJS实现，播放器使用乐视云播放器。</p>
             <div style="height: 30px;"></div>
-            <h4>安卓应用市场-抓取</h4>
+            <h4>安卓应用市场-抓取 Appinfo
+                <small>负责人</small>
+            </h4>
             <p class="lead">&nbsp;-
                 各大安卓APP应用市场数据，包含360手机助手(手机端)、华为、安智、豌豆荚等，检测分类下新上应用信息，以及各个APP每日数据变化，达到同一APP在不同时间的数据体现。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;使用分布式、多线程的模式抓取数据，统计结果展示服务使用 Django，Bootstrap，EChars
                 框架组件完成，可根据不同维度展示抓取数据，以及定时脚本产出的量级较高的统计结果。</p>
             <div style="height: 30px;"></div>
-            <h4>彩票系统-抓取</h4>
+            <h4>彩票系统-抓取 Lottery
+                <small>负责人</small>
+            </h4>
             <p class="lead">&nbsp;- 蛙趣视频彩票 大屏幕专版和APP足篮彩直播，其中包含11选5(分地区)、足篮彩、快3(分地区)、大乐透等多个玩法的数据支持。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;双机器多进程执行、使用Tornado协程 和其AsyncHttpClient 并发且高频次抓取彩票相关数据，
                 每种彩票玩法保证有2个以上的相关站点支持，在单个彩票站点宕机的时候可以保证自家站点的线上业务稳定，同时保证数据完整性。</p>
             <div style="height: 30px;"></div>
+            <h4>用户权限管理
+                <small>负责人</small>
+            </h4>
+            <p class="lead">&nbsp;- OP系统的权限管理，支持用户组，由上向下分配权限，包含部门，对应职工，管理/使用/停启配置，部门级临时权限共享等。</p>
+            <div style="height: 30px;"></div>
+            <h4>运营/编辑 零散工作支持
+                <small>负责人</small>
+            </h4>
+            <p>&nbsp;- 支持运营或其他部门数据相关的抓取、展现、统计等零散的工作支持。</p>
+        </div>
+    </div>
+</section>
+<section id="work_exp">
+    <div class="container">
+        <h3 style="margin-bottom: 30px;">工作经历</h3>
+        <blockquote>
+            <a href="http://www.waqu.com/" target="_blank" class="text-nowrap">
+                <h4><strong>蛙趣视频(挖趣)</strong>
+                    <small class="text-right">2015年5月 ~ 至今</small>
+                </h4>
+            </a>
+            <p class="lead">职位: <strong>Python开发</strong></p>
+            <p class="lead">部门: <strong>后端</strong>/<strong>前端</strong></p>
+            <h5>工作内容</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <small>负责视频抓取系统的开发维护，保证每日新抓视频2W条（峰值8W条）以上，保证内容源正常解析，优化代码结构、性能，完善单元测试等，保证视频点播服务的正常使用和内容更新。</small>
+                </li>
+                <li>
+                    <small>独立完成后端各种API的设计与开发，配合客户端和服务端开发人员进行应用及系统整合。</small>
+                </li>
+                <li>
+                    <small>文档攒写、数据抓取、数据库结构设计、接口、界面、功能相关的开发工作。</small>
+                </li>
+                <li>
+                    <small>参与开发公司内部使用的公用组件。</small>
+                </li>
+            </ul>
+        </blockquote>
+    </div>
+</section>
+<!--116.388682,40.105803-->
+<section>
+    <div class="container">
+        <h3>期望工作</h3>
+        <div style="margin-left: 20px;">
+            <h4><strong>Python/C*</strong></h4>
+            <p class="lead">前后端开发、数据抓取的相关工作。</p>
+            <p>&nbsp;迫切希望能找到Python/C混合使用的相关工作，深度接触C*语言，优化Python语言的短板，做出高可用高性能高兼容的模块功能。</p>
         </div>
     </div>
 </section>
 <section>
     <div class="container">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=110 src="//music.163.com/outchain/player?type=1&id=2726100&auto=1&height=90" style="width: 100%"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
+                src="//music.163.com/outchain/player?type=2&id=29562295&auto=1&height=66" style="width: 100%"></iframe>
     </div>
 </section>
 
 <section id="thx">
     <div class="container">
-        <!-- 小屏幕标题居中特别好 -->
         <h2>特别感谢</h2>
         <div style="margin-left: 5%">
             <p class="lead"><strong>Github</strong> 提供免费的简历网站存储和网络访问。</p>
@@ -515,38 +536,36 @@
             <a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank" style="color: black">KING-REESE</a><br>
             北京市昌平区北七家王府温馨公寓<br>
             <abbr title="Phone">P:</abbr> <a href="tel:17600224746" style="color: black">(+86)17600224746</a><br>
-            <abbr title="QQ">QQ:</abbr><a class="phone-qq"
-                                          href="mqqwpa://im/chat?chat_type=wpa&uin=184187664">184187664</a>
-            <a class="pc-qq" href="tencent://message/?uin=184187664">184187664</a>
+            <abbr title="QQ">QQ:</abbr>
+            <a class="visible-xs-block" href="mqqwpa://im/chat?chat_type=wpa&uin=184187664">184187664</a>
+            <a class="hidden-xs" href="tencent://message/?uin=184187664">184187664</a>
             <br>
         </address>
 
         <address>
             <strong>罗瑞青</strong><br>
-            <a href="mailto:184817664@qq.com">184187664@qq.com</a><br>
+            <a href="mailto:184187664@qq.com">184187664@qq.com</a><br>
         </address>
     </div>
 
 </section>
-
-<script type="text/javascript">
-    $youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");
-    $youziku.draw();
-</script>
+<section>
+    <div id="container map" tabindex="0"></div>
+</section>
+<!--<script type="text/javascript">-->
+<!--$youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");-->
+<!--$youziku.draw();-->
+<!--</script>-->
 </body>
 <script type="application/javascript" src="bootstrap/js/jquery/jquery.min.js"></script>
 <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script>
-    // 座右铭对齐
-    setInterval(function () {
-        var head_img_width = $("#head-img").width();
-        console.log(head_img_width);
-        if (head_img_width < 300) {
-            $('#head-info-motto').append($(".motto-lg"));
-        } else if (head_img_width > 300) {
-            $('#head-info form').append($(".motto-lg"));
-        }
-    }, 1000)
-
+<script src="http://webapi.amap.com/maps?v=1.3&key=a314413f17bbb82dab605a9af72d8c64"></script>
+<!--116.38902,40.106348 坐标-->
+<script type="text/javascript">
+    var map = new AMap.Map('#map', {
+        resizeEnable: true,
+        zoom: 10,
+        center: [116.38902,40.106348]
+    });
 </script>
 </html>
