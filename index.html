@@ -67,7 +67,7 @@
             background-color: white;
         }
 
-        #head form label a {
+        #head form label a, #thx a {
             color: #333;
         }
 
@@ -81,10 +81,10 @@
             text-align: center;
         }
 
-        /*#info p {*/
-        /*color: white*/
-        /*opacity: 0.8;*/
-        /*}*/
+        #info p, #info h3 {
+            color: #BFBFBE;
+            opacity: 0.8;
+        }
 
         /* 头像 */
 
@@ -128,6 +128,10 @@
 
             dd {
                 padding-left: 16%;
+            }
+
+            #info p, #info h3 {
+                color: #333;
             }
 
             #head-info {
@@ -271,43 +275,30 @@
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            彩票系统，比较烦这里面的种种坑
+                            Tornado做爬虫框架的种种坑
                         </a>
                     </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                        使用Tornado作为爬虫框架的时候，用这非阻塞HTTP Client真的是很爽，不过代码的移植性。。。呵呵。
-                        彩票系统作为一个高频刷新接口页面的流程，量级不高，但属于高频行为，Tornado的非阻塞特别适合这件事儿，
-                        but...理想很丰满，当我高频次的循环请求的时候且任务很多的时候，休息间隔（<kbd>gen.sleep</kbd>）又特别小的时候，意外的状况出现了，
-                        当每次 <kbd>yield</kbd>的时候，协程内部在无限次的切换执行其他非阻塞的代码中，我的当前任务还没有跑完整轮，
-                        他就切换到其他任务中去，其实切不切换无所谓，重要的是执行顺序乱了，我第一个任务的第一轮执行过程 可能会被压到后面无限长的队伍里面去，
-                        可能永远执行不到(虽然不大可能，但如果你的排队的人量级上去了，这个是有可能的！)，据说这是一群会排队懂规矩的三好有为青年乱插队一样。。不受控制。
-                        柜台依旧办理业务，也不管谁插队，反正我正在紧张的工作中。。。
-                        好吧，开始重写结构，分任务，分开在不同的进程里面，这次有了多个窗口，
-                        插队也没事儿了，反正我处理能力是固定的，大家分好类自己去自己的柜台办业务得了，针对每个柜台来说，反正人不多，都能很快的排上号。
-                        but....可能数据库不高兴了，瞬间打满了连接。。嗯。。。
-                        好吧，开始加上数据库连接池。。。
-                        总结：Tornado的协程啊，可不能乱用了，想清楚自己的业务场景是不是适合，不过用来做爬虫，性能booooooooo~~~
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;最近在做一个彩票系统，使用Tornado作为爬虫框架的时候，用这非阻塞HTTP
+                            Client真的是很爽，不过代码的移植性就不尽人意了(py2)。</p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;彩票系统作为一个高频刷新接口页面的流程，量级不高，但属于高频行为，Tornado的非阻塞特别适合这件事儿,
+                            but,理想很丰满，当我高频次的循环请求的时候且任务很多的时候，休息间隔（<kbd>gen.sleep</kbd>）又特别小的时候，意外的状况出现了，
+                            当每次 <kbd>yield</kbd>的时候，协程内部在无限次的切换执行其他非阻塞的代码中，我的当前任务还没有跑完整轮，
+                            他就切换到其他任务中去，其实切不切换不重要，重要的是执行顺序乱了，我第一个任务的第一轮执行过程 可能会被压到后面无限长的队伍里面去，
+                            可能永远执行不到(如果你的消费跟不上生产，这个是有可能的！)，柜台依旧办理业务，不管谁插队，我正在紧张的工作中。
+                        </p>
+                        <P>据说这是一群会排队懂规矩的三好有为青年乱插队现象。</P>
+                        <P>&nbsp;&nbsp;&nbsp;&nbsp;好吧，开始重写结构，分任务，分开在不同的进程里面，这次有了多个业务员窗口，
+                            插队也没问题了，柜台的处理能力是固定的，消费也能够跟上生产了，大家分好类自己去自己的柜台办业务，针对每个柜台来说，任务都能很快的排上号。</P>
+                        <P>&nbsp;&nbsp;&nbsp;&nbsp;but，分了窗口，可能数据库不高兴了，瞬间打满了连接。。嗯。。。好吧，开始加上数据库连接池。。。</P>
+                        总结：用Tornado的协程写爬虫框架，要想清楚自己的业务场景是不是适合，不过用来做爬虫，性能确实不俗。
                     </div>
                 </div>
             </div>
-            <!--<div class="panel panel-default">-->
-            <!--<div class="panel-heading" role="tab" id="headingThree">-->
-            <!--<h4 class="panel-title">-->
-            <!--<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"-->
-            <!--href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
-            <!--有生之年能够成为一个改变世界的人-->
-            <!--</a>-->
-            <!--</h4>-->
-            <!--</div>-->
-            <!--<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">-->
-            <!--<div class="panel-body">-->
-            <!--&lt;!&ndash;像马云似的，有想法就能变成现实，然后影响千千万万的人，以前老大总说我，写代码跟脑电波似的，&ndash;&gt;-->
-            <!--&lt;!&ndash;就希望想想就能变成现实，其实不远的将来就会出现，不是么。&ndash;&gt;-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
+
         </div>
 
     </div>
@@ -319,7 +310,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
             求知欲强烈，热爱技术，喜欢新技术，喜欢code review。
             本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
-            <footer class="text-right">可以理解为一个<cite title="Source Title">臭写代码</cite>的</footer>
+            <footer class="text-right">就一<cite title="Source Title">臭写代码</cite>的</footer>
         </div>
     </div>
 </section>
@@ -487,11 +478,17 @@
 <!--116.388682,40.105803-->
 <section>
     <div class="container">
-        <h3>期望工作</h3>
+        <h3>期望工作与薪资</h3>
         <div style="margin-left: 20px;">
             <h4><strong>Python/C*</strong></h4>
-            <p class="lead">前后端开发、数据抓取的相关工作。</p>
-            <p>&nbsp;迫切希望能找到Python/C混合使用的相关工作，深度接触C*语言，优化Python语言的短板，做出高可用高性能高兼容的模块功能。</p>
+            <p class="lead">&nbsp;&nbsp;前后端开发、数据抓取、以及其他具有挑战性的岗位。
+                <small>
+                    <ins>希望能有更好的工作和学习环境，增加技术积累。</ins>
+                </small>
+            </p>
+
+            <h4><strong>￥15K</strong></h4>
+            <p class="lead">&nbsp;&nbsp;- 年终奖/年底双薪/弹性工作/带薪年假/领导nice/氛围轻松和谐</p>
         </div>
     </div>
 </section>
@@ -506,8 +503,9 @@
     <div class="container">
         <h2>特别感谢</h2>
         <div style="margin-left: 5%">
-            <p class="lead"><strong>Github</strong> 提供免费的简历网站存储和网络访问。</p>
-            <p class="lead"><strong>蛙趣视频</strong> 给我学习成长的机会。</p>
+            <p class="lead"><strong><a href="https://pages.github.com/" target="_blank">Github</a></strong>
+                提供免费的简历网站存储和网络访问。</p>
+            <p class="lead"><strong><a href="http://www.waqu.com/" target="_blank">蛙趣视频</a></strong> 给我学习成长的机会。</p>
             <p class="lead"><strong>父母</strong> 养育之恩，<strong>女朋友</strong>的相守陪伴。</p>
             <p class="lead"><strong>关心我的人</strong>的鼓励支持与教导。</p>
         </div>
@@ -552,7 +550,17 @@
 <script src="https://webapi.amap.com/maps?v=1.3&key=a314413f17bbb82dab605a9af72d8c64"></script>
 <!--116.38902,40.106348 坐标-->
 <script type="text/javascript">
-
+    $.support.transition = true;
+    $("#top ul a").click(function () {
+        $('.collapse-toggle').dropdown();
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
+    });
     $(document).ready(function () {
 //        页面加载完成后加载高德地图
         var map = new AMap.Map('container', {
