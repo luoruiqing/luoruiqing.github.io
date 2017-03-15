@@ -7,13 +7,15 @@
     <meta name="author" content="Reese">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/99704/19673/58c962adf629d8065c3f5b92.css' rel='stylesheet'
+          type='text/css'/>
     <style>
         /*  基础属性 */
         html,
         body {
             height: 100%;
             width: 100%;
-            font-family: "微软雅黑";
+            font-family: 'jdzhonyuanjian977d2bf5918578', "微软雅黑";
         }
 
         body {
@@ -132,7 +134,8 @@
         }
 
         #map {
-            height: 50%;
+            height: 300px;
+            width: 100%;
             margin: 0;
         }
 
@@ -537,7 +540,11 @@
 <section>
     <div style="height: 1px"></div>
 </section>
-<section></section>
+<section>
+    <div id="container">
+        <div id="map" tabindex="0"></div>
+    </div>
+</section>
 <section id="about">
     <div class="container text-center">
         <address>
@@ -558,9 +565,7 @@
     </div>
 
 </section>
-<section>
-    <div id="container map" tabindex="0"></div>
-</section>
+
 <!--<script type="text/javascript">-->
 <!--$youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");-->
 <!--$youziku.draw();-->
