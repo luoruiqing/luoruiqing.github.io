@@ -5,7 +5,7 @@
     <title>罗瑞青的个人简历</title>
     <meta name="description" content="罗瑞青的个人简历">
     <meta name="author" content="Reese">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /*  基础属性 */
@@ -89,6 +89,10 @@
             background-color: white;
         }
 
+        #head form label a {
+            color: #333;
+        }
+
         /*  简介 */
         #info {
             margin-top: 15%;
@@ -125,6 +129,11 @@
         #exp small {
             color: #31708f;
             font-weight: bold;
+        }
+
+        #map {
+            height: 50%;
+            margin: 0;
         }
 
         /*   响应式调整   */
@@ -440,7 +449,7 @@
             <p class="lead">&nbsp;- 短视频的网页点播服务，包含播放页面，推荐页，视频专辑页面。以及部分导流页，活动页。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;采用Python Tornado作为后端框架，数据库采用的RDS-SQL，前端使用基础前端技术+AngularJS实现，播放器使用乐视云播放器。</p>
             <div style="height: 30px;"></div>
-            <h4>安卓应用市场-抓取 Appinfo
+            <h4>安卓应用市场-抓取
                 <small>负责人</small>
             </h4>
             <p class="lead">&nbsp;-
@@ -448,7 +457,7 @@
             <p>&nbsp;&nbsp;&nbsp;&nbsp;使用分布式、多线程的模式抓取数据，统计结果展示服务使用 Django，Bootstrap，EChars
                 框架组件完成，可根据不同维度展示抓取数据，以及定时脚本产出的量级较高的统计结果。</p>
             <div style="height: 30px;"></div>
-            <h4>彩票系统-抓取 Lottery
+            <h4>彩票系统-抓取
                 <small>负责人</small>
             </h4>
             <p class="lead">&nbsp;- 蛙趣视频彩票 大屏幕专版和APP足篮彩直播，其中包含11选5(分地区)、足篮彩、快3(分地区)、大乐透等多个玩法的数据支持。</p>
@@ -508,9 +517,9 @@
     </div>
 </section>
 <section>
-    <div class="container">
+    <div class="container-fluid">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
-                src="//music.163.com/outchain/player?type=2&id=29562295&auto=1&height=66" style="width: 100%"></iframe>
+                src="//music.163.com/outchain/player?type=2&id=29562295&auto=0&height=66" style="width: 100%"></iframe>
     </div>
 </section>
 
@@ -559,13 +568,13 @@
 </body>
 <script type="application/javascript" src="bootstrap/js/jquery/jquery.min.js"></script>
 <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script src="http://webapi.amap.com/maps?v=1.3&key=a314413f17bbb82dab605a9af72d8c64"></script>
+<script src="https://webapi.amap.com/maps?v=1.3&key=a314413f17bbb82dab605a9af72d8c64"></script>
 <!--116.38902,40.106348 坐标-->
 <script type="text/javascript">
-    var map = new AMap.Map('#map', {
+    var map = new AMap.Map('map', {
         resizeEnable: true,
         zoom: 10,
-        center: [116.38902,40.106348]
+        center: [116.38902, 40.106348]
     });
 </script>
 </html>
