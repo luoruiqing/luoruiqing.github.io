@@ -177,8 +177,8 @@
                 </p>
                 <ul class="nav navbar-nav">
                     <li><a href="#head">简介</a></li>
-                    <li><a href="#recently">近况</a></li>
-                    <li><a href="#evaluate">个人评价</a></li>
+                    <li class="hidden-sm"><a href="#recently">近况</a></li>
+                    <li class="hidden-sm"><a href="#evaluate">个人评价</a></li>
                     <li><a href="#storage">技术储备</a></li>
                     <li><a href="#exp">项目经验</a></li>
                     <li><a href="#work_exp">工作经历</a></li>
@@ -527,7 +527,7 @@
             北京市昌平区北七家王府温馨公寓<br>
             <abbr title="Phone">P:</abbr> <a href="tel:17600224746" style="color: black">(+86)17600224746</a><br>
             <abbr title="QQ">QQ:</abbr>
-            <a class="visible-xs-block" href="mqqwpa://im/chat?chat_type=wpa&uin=184187664">184187664</a>
+            <a class="visible-xs-block" href="http://wpa.qq.com/msgrd?v=3&uin=184187664&site=qq&menu=yes">184187664</a>
             <a class="hidden-xs" href="tencent://message/?uin=184187664">184187664</a>
             <br>
         </address>
@@ -560,15 +560,6 @@
             easing: "swing"
         });
         return false;
-    });
-    $(window).scroll(function () {
-        var menu = $(".menu");
-        if ($(document).scrollTop() > $(window).height()){
-            menu.addClass("navbar-fixed-top")
-        }else{
-
-        }
-
     });
     $(document).ready(function () {
 //        页面加载完成后加载高德地图
