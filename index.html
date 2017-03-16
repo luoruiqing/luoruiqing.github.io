@@ -561,6 +561,15 @@
         });
         return false;
     });
+    $(window).scroll(function () {
+        var menu = $(".menu");
+        if ($(document).scrollTop() > $(window).height()){
+            menu.addClass("navbar-fixed-top")
+        }else{
+
+        }
+
+    });
     $(document).ready(function () {
 //        页面加载完成后加载高德地图
         var map = new AMap.Map('container', {
