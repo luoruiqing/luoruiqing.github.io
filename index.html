@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>罗瑞青的个人简历</title>
     <meta name="description" content="罗瑞青的个人简历">
-    <link rel="shortcut icon" href="favicon.ico" >
+    <link rel="shortcut icon" href="favicon.ico">
     <meta name="author" content="Reese">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="jquery-ui/jquery-ui.min.css">
     <link href='https://cdn.webfont.youziku.com/webfonts/nomal/99704/19673/58c962adf629d8065c3f5b92.css'
           rel='stylesheet' type='text/css'/>
     <style>
@@ -17,6 +18,10 @@
             height: 100%;
             width: 100%;
             font-family: "微软雅黑";
+            background: url('./images/banner.jpg');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         body {
@@ -27,11 +32,11 @@
 
         header {
             height: 100%;
-            background-image: url('./images/banner.jpg');
         }
 
         section {
-            margin: 120px 0;
+            background-color: white;
+            padding: 120px 0 0 0;
         }
 
         /*  首屏 */
@@ -50,6 +55,7 @@
             background: repeat; /* 背景透明 */
             border: 0; /* 清除线条 */
             color: white; /* 文字白色 */
+            font-size: 16px;
         }
 
         .menu .navbar-brand {
@@ -72,9 +78,14 @@
             color: #333;
         }
 
+        /*#top p {*/
+            /*margin-right: 0;*/
+        /*}*/
+
         /*  简介 */
         #info {
-            margin-top: 15%;
+            padding-top: 18%;
+            background-color: inherit;
             /*vertical-align: middle;*/
         }
 
@@ -118,9 +129,12 @@
 
         /*   响应式调整   */
         @media screen and (max-width: 768px) {
+            body {
+                background-position: left;
+            }
 
             section {
-                margin: 80px 0;
+                padding: 120px 0 0 0;
             }
 
             dt {
@@ -140,7 +154,7 @@
             }
 
             #info {
-                margin-top: 27%;
+                padding-top: 35%;
             }
 
             #thx h2 {
@@ -178,11 +192,10 @@
                 </p>
                 <ul class="nav navbar-nav">
                     <li><a href="#head">简介</a></li>
-                    <li class="hidden-sm"><a href="#recently">近况</a></li>
-                    <li class="hidden-sm"><a href="#evaluate">个人评价</a></li>
                     <li><a href="#storage">技术储备</a></li>
                     <li><a href="#exp">项目经验</a></li>
                     <li><a href="#work_exp">工作经历</a></li>
+                    <li class="hidden-sm"><a href="#evaluate">个人评价</a></li>
                     <li><a href="#thx">感谢</a></li>
                     <li><a href="https://github.com/luoruiqing" target="_blank">Github</a></li>
                     <li><a href="#about">关于</a></li>
@@ -251,70 +264,9 @@
     </div>
 
 </section>
-<!--section id="recently" style="background-image: url('./images/banner.jpg');">
-    <div class="container">
-        <h3 style="margin-bottom: 15px;">最近在做的事儿</h3>
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                           aria-expanded="true" aria-controls="collapseOne">
-                            学习弹吉他
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        这可能是我第一次正儿八经的接触乐器了，感觉难度很大，但是以我英雄联盟白金手子的能力，相信我能够克服困难。
-                        万一以后不当码农了，去做个流浪歌手之类的，也是可以的，就算是做不成流浪歌手，没事学学狗挠门也还是不错。
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Tornado做爬虫框架的种种坑
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;最近在做一个彩票系统，使用Tornado作为爬虫框架的时候，用这非阻塞HTTP
-                            Client真的是很爽，不过代码的移植性就不尽人意了(py2)。</p>
-                        <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;彩票系统作为一个高频刷新接口页面的流程，量级不高，但属于高频行为，Tornado的非阻塞特别适合这件事儿,
-                            but,理想很丰满，当我高频次的循环请求的时候且任务很多的时候，休息间隔（<kbd>gen.sleep</kbd>）又特别小的时候，意外的状况出现了，
-                            当每次 <kbd>yield</kbd>的时候，协程内部在无限次的切换执行其他非阻塞的代码中，我的当前任务还没有跑完整轮，
-                            他就切换到其他任务中去，其实切不切换不重要，重要的是执行顺序乱了，我第一个任务的第一轮执行过程 可能会被压到后面无限长的队伍里面去，
-                            可能永远执行不到(如果你的消费跟不上生产，这个是有可能的！)，柜台依旧办理业务，不管谁插队，我正在紧张的工作中。
-                        </p>
-                        <P>据说这是一群会排队懂规矩的三好有为青年乱插队现象。</P>
-                        <P>&nbsp;&nbsp;&nbsp;&nbsp;好吧，开始重写结构，分任务，分开在不同的进程里面，这次有了多个业务员窗口，
-                            插队也没问题了，柜台的处理能力是固定的，消费也能够跟上生产了，大家分好类自己去自己的柜台办业务，针对每个柜台来说，任务都能很快的排上号。</P>
-                        <P>&nbsp;&nbsp;&nbsp;&nbsp;but，分了窗口，可能数据库不高兴了，瞬间打满了连接。。嗯。。。好吧，开始加上数据库连接池。。。</P>
-                        总结：用Tornado的协程写爬虫框架，要想清楚自己的业务场景是不是适合，不过用来做爬虫，性能确实不俗。
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</--section-->
-<section id="evaluate">
-    <div class="container">
-        <h3 style="margin-bottom: 25px;">个人评价</h3>
-        <div class="panel-body">
-            &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
-            求知欲强烈，热爱技术，喜欢新技术，喜欢code review。
-            本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
-            <footer class="text-right">就一<cite title="Source Title">臭写代码</cite>的</footer>
-        </div>
-    </div>
+<section id="recently" style="background: inherit;height: 251px;">
 </section>
+
 <section id="storage">
     <div class="container">
         <h3>技术储备</h3>
@@ -477,6 +429,17 @@
     </div>
 </section>
 <!--116.388682,40.105803-->
+<section id="evaluate">
+    <div class="container">
+        <h3 style="margin-bottom: 25px;">个人评价</h3>
+        <div class="panel-body">
+            &nbsp;&nbsp;&nbsp;&nbsp;有良好的编码风格、团队合作能力，较强的代码分析及源码阅读能力。
+            求知欲强烈，热爱技术，喜欢新技术，喜欢code review。
+            本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
+            <footer class="text-right">就一<cite title="Source Title">臭写代码</cite>的</footer>
+        </div>
+    </div>
+</section>
 <section>
     <div class="container">
         <h3>期望工作与薪资</h3>
@@ -488,7 +451,7 @@
                 </small>
             </p>
 
-            <h4><strong>￥15K</strong></h4>
+            <h4><strong>￥15K ~ ￥25K</strong></h4>
             <p class="lead">&nbsp;&nbsp;- 年终奖/年底双薪/弹性工作/带薪年假/领导nice/氛围轻松和谐</p>
         </div>
     </div>
