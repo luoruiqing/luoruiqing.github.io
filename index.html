@@ -36,7 +36,7 @@
 
         section {
             background-color: white;
-            padding: 120px 0 0 0;
+            padding: 80px 0 80px 0;
         }
 
         /*  首屏 */
@@ -79,7 +79,7 @@
         }
 
         /*#top p {*/
-            /*margin-right: 0;*/
+        /*margin-right: 0;*/
         /*}*/
 
         /*  简介 */
@@ -121,6 +121,11 @@
             font-weight: bold;
         }
 
+        #recently {
+            background: repeat;
+            height: 251px;
+        }
+
         #map {
             height: 300px;
             width: 100%;
@@ -134,7 +139,7 @@
             }
 
             section {
-                padding: 120px 0 0 0;
+                padding: 60px 0 60px 0;
             }
 
             dt {
@@ -258,8 +263,7 @@
         </div>
     </div>
 </section>
-<section id="recently" style="background: inherit;height: 251px;">
-</section>
+<section id="recently"></section>
 <section id="storage">
     <div class="container">
         <h3>技术储备</h3>
@@ -476,7 +480,7 @@
         <div id="map" tabindex="0"></div>
     </div>
 </section>
-<section id="about" class="css977d2bf5918578">
+<section id="about" class="css977d2bf5918578" style="padding-bottom: 20px;">
     <div class="container text-center">
         <address>
             <strong><a href="http://weibo.com/u/5449233194?s=6uyXnP" target="_blank">Weibo</a></strong><br>
@@ -496,7 +500,18 @@
     </div>
 
 </section>
-
+<section class="return text-center" style="padding: 0;background-color: #7D7D7B;">
+    <div class="container-fluid">
+        <a href="#top" style="height: 0;font-size: 0">
+            <div>
+                &nbsp;&nbsp;回到顶部&nbsp;&nbsp;
+                <!--<button style="width: 100%;background:repeat;border: 0;color: #B6B6B5">-->
+                <!---->
+                <!--</button>-->
+            </div>
+        </a>
+    </div>
+</section>
 <!--<script type="text/javascript">-->
 <!--$youziku.load("body", "199bd15380e444838691428f794b9a2f", "jdzhonyuanjian");-->
 <!--$youziku.draw();-->
@@ -517,6 +532,24 @@
             easing: "swing"
         });
         return false;
+    });
+    console.log($(document).height() - $(window).height());
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+
+//            $(".return a:eq(0)").animate({
+//                "fontSize": "16px"
+//            });
+//            $(".return").removeClass("hidden");
+//            $(".return").animate({
+//
+//            })
+        }
+        else {
+//            $(".return a:eq(0)").animate({
+//                "fontSize": "0"
+//            });
+        }
     });
     $(document).ready(function () {
 //        页面加载完成后加载高德地图
